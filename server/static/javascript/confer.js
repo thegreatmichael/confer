@@ -668,7 +668,7 @@ function get_paper_html(id){
   raw_html += '<td class="content">'    
   raw_html += '<ul>'
 
-  raw_html += '<li class="paper-title"><h3><span class="link" onclick=select_paper("'+id+'")>'+ entities[id].title +'</span>'
+  raw_html += '<li id="paper-' + id + ' class="paper-title"><h3><span class="link" onclick=select_paper("'+id+'")>'+ entities[id].title +'</span>'
   if(entities[id].subtype!=null){
     raw_html += '<span class="paper-subtype">' + ' - ' + entities[id].subtype + '</span>'
   }
@@ -764,7 +764,7 @@ function get_session_html(id, day, time, slot_class, room){
     //tags = ' tags'
   }
 
-  var raw_html = '<div class="session ' + award +  ' ' + tags +  ' ' + id  + ' ' + day + ' ' + slot_class + ' '
+  var raw_html = '<div id="session-' + id + '" class="session ' + award +  ' ' + tags +  ' ' + id  + ' ' + day + ' ' + slot_class + ' '
         + ' ' + room + '" data="' + id + '">'
   raw_html += '<table class="session-container session-collapsible" data="' + id + '"><tr class="clickable">'
   
